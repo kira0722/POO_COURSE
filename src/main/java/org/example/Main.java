@@ -1,6 +1,6 @@
 package org.example;
 
-import org.w3c.dom.ls.LSOutput;
+import static org.example.ui.UIMenu.showMenu;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,7 +8,12 @@ public class Main {
         Doctor doctor = new Doctor("pepito");
         doctor.name = "carlitos";
         doctor.showName();
+        doctor.showId();
+        doctor.showId();
+
+        showMenu();
 
     }
+
 }
 
