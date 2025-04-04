@@ -1,7 +1,6 @@
 package org.example;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 
 public class Doctor extends User {
@@ -9,8 +8,8 @@ public class Doctor extends User {
     private String speciality;
 
     Doctor(String name, String email){
-        super(name, email);
-        System.out.println("El nombre del doctor es: " +name);
+        super(name,email);
+        System.out.println("El nombre del Doctor asignado es: " + name);
         this.speciality = speciality;
     }
 
@@ -30,35 +29,23 @@ public class Doctor extends User {
 
     ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
     public void addAvailableAppointment(Date date, String time){
-        availableAppointments.add(new Doctor.AvailableAppointment(date, time));
+        availableAppointments.add(new Doctor.AvailableAppointment(date,time));
     }
 
     public ArrayList<AvailableAppointment> getAvailableAppointments(){
-        return  availableAppointments;
+        return availableAppointments;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nSpecuality: "+ speciality + "\nAvailable: "+ availableAppointments.toString();
     }
 
     public  static class AvailableAppointment{
         private int id;
         private Date date;
         private String time;
-        private String addres;
-        private String phoneNumber;
 
-        public String getAddres() {
-            return addres;
-        }
-
-        public void setAddres(String addres) {
-            this.addres = addres;
-        }
-
-        public String getPhoneNumber() {
-            return phoneNumber;
-        }
-
-        public void setPhoneNumber(String phoneNumber) {
-            this.phoneNumber = phoneNumber;
-        }
 //Available_appoinment
 
         public AvailableAppointment(Date date, String time) {
@@ -88,6 +75,11 @@ public class Doctor extends User {
 
         public void setTime(String time) {
             this.time = time;
+        }
+
+        @Override
+        public String toString() {
+            return "Available Appoinments \nDate: "+ date + "\nTime: "+ time;
         }
     }
 }
