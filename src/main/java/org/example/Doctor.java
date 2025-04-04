@@ -4,30 +4,29 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 
-public class Doctor {
-    static int id = 1; //Autoincremental
-    private String name;
+public class Doctor extends User {
+
     private String speciality;
-    private String email;
 
-    Doctor(){
-        System.out.println("construyendo el objeto doctor");
-    }
-
-    Doctor(String name, String speciality){
+    Doctor(String name, String email){
+        super(name, email);
         System.out.println("El nombre del doctor es: " +name);
-        id++;
-        this.name = name;
         this.speciality = speciality;
     }
 
-    public void showName(){
-        System.out.println(name);
+    public String getSpeciality() {
+        return speciality;
     }
 
-    public void showId(){
-        System.out.println("ID Doctor: "+ id);
+    public void setSpeciality(String speciality) {
+        this.speciality = speciality;
     }
+
+
+
+
+
+
 
     ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
     public void addAvailableAppointment(Date date, String time){
@@ -42,7 +41,25 @@ public class Doctor {
         private int id;
         private Date date;
         private String time;
-        //Available_appoinment
+        private String addres;
+        private String phoneNumber;
+
+        public String getAddres() {
+            return addres;
+        }
+
+        public void setAddres(String addres) {
+            this.addres = addres;
+        }
+
+        public String getPhoneNumber() {
+            return phoneNumber;
+        }
+
+        public void setPhoneNumber(String phoneNumber) {
+            this.phoneNumber = phoneNumber;
+        }
+//Available_appoinment
 
         public AvailableAppointment(Date date, String time) {
             this.date = date;

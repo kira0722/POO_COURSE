@@ -1,65 +1,13 @@
 package org.example;
 
-public class Patient {
-    int id = 1;
-    private String name;
-    private String email;
-    private String addres;
-    private String phoneNumber;
+public class Patient extends User{
     private String birthday;
     private double weight;
     private double hight;
     private String blood;
 
     Patient(String name, String email){
-        this.name = name;
-        this.email = email;
-        this.weight = 54.5;
-        System.out.println(weight + " kg");
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getAddres() {
-        return addres;
-    }
-
-    public void setAddres(String addres) {
-        this.addres = addres;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        if (phoneNumber.length() > 8){
-            System.out.println("El numero debe ser de 8 digitos maximo");
-        }else if (phoneNumber.length() == 8){
-            this.phoneNumber = phoneNumber;
-        }
+        super(name, email);
     }
 
     public String getBirthday() {
