@@ -1,9 +1,9 @@
 package org.example;
 
-import java.sql.SQLOutput;
-import java.util.Date;
+import org.example.model.Doctor;
+import org.example.model.Patient;
 
-import static org.example.ui.UIMenu.showMenu;
+import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
