@@ -28,6 +28,7 @@ public class UIPatientMenu {
                     showBookAppointmentMenu();
                     break;
                 case 2:
+                    showPatientAppointments();
                     break;
                 case 0:
                     UIMenu.showMenu();
@@ -117,7 +118,6 @@ public class UIPatientMenu {
                         "Time: "+
                         UIMenu.patientLogged.getAppointmentDoctors().get(i).getTime()+
                         "\n Doctor: " + UIMenu.patientLogged.getAppointmentDoctors().get(i).getDoctor());
-
             }
             System.out.println("0. Return");
         }while (response != 0);
