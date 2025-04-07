@@ -9,7 +9,7 @@ public class Patient extends User{
     public Patient(String name, String email){
         super(name, email);
         //mas instrucciones
-        System.out.println("El nombre del paciente es: " + name);
+//        System.out.println("El nombre del paciente es: " + name);
     }
 
     public String getBirthday() {
