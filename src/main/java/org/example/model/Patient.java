@@ -9,6 +9,7 @@ public class Patient extends User{
     public Patient(String name, String email){
         super(name, email);
         //mas instrucciones
+        System.out.println("El nombre del paciente es: " + name);
     }
 
     public String getBirthday() {
@@ -47,5 +48,11 @@ public class Patient extends User{
     public String toString() {
         return super.toString()+ "\nAge: "+ birthday + "\nWeight: "+ getWeight()+ "\n Height: "
                 + getHight()+ "\nBlood: "+ blood;
+    }
+
+    @Override
+    public void showDataUser() {
+        System.out.println("Paciente");
+        System.out.println("Hitorial completo desde nacimiento");
     }
 }

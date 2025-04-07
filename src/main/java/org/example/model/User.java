@@ -1,6 +1,8 @@
 package org.example.model;
 
-public class User {
+import java.security.PublicKey;
+
+public abstract class User {
     private int id;
     private String name;
     private String email;
@@ -61,4 +63,7 @@ public class User {
         return "User: "+ name + ", Email: "+ email+
                 "\nAdreess: "+ addres+ " Phone: "+ phoneNumber;
     }
+
+    public abstract void showDataUser();
+
 }

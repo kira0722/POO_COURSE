@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.model.Doctor;
 import org.example.model.Patient;
+import org.example.model.User;
 
 import java.util.Date;
 
@@ -19,25 +20,28 @@ public class Main {
 
         System.out.println(myDoctor);
 
+        User user = new Doctor("anahi", "ana@gmail.com");
+        user.showDataUser();
+
+        User userPat = new Patient("anahidasdsad", "ana@gmail.com");
+        userPat.showDataUser();
+
 //        for (Doctor.AvailableAppointment aA: myDoctor.getAvailableAppointments()){
 //            System.out.println(aA.getDate()+ " " + aA.getTime());
 //        }
 
-        Patient patient = new Patient("Alejandra", "aleja@gmail.com");
-
-        System.out.println(patient);
-
-
-
-
-
-
-
+//        Patient patient = new Patient("Alejandra", "aleja@gmail.com");
+//        System.out.println(patient);
 
 
     }
 
 }
+
+
+
+
+
 
 
 
