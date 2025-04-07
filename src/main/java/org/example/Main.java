@@ -1,9 +1,9 @@
 package org.example;
 
-import org.example.model.Doctor;
-import org.example.model.Patient;
-import org.example.model.User;
+import org.example.model.*;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Main {
@@ -25,6 +25,29 @@ public class Main {
 
         User userPat = new Patient("anahidasdsad", "ana@gmail.com");
         userPat.showDataUser();
+
+        User user1 = new User("juana", "juana@gmail.com") {
+            @Override
+            public void showDataUser() {
+                System.out.println("Doctor\n");
+                System.out.println("Hospital: cruz verde");
+                System.out.println("Departamento: Geriatria");
+            }
+        };
+
+        user1.showDataUser();
+
+        ISchedulable iSchedulable = new ISchedulable() {
+            @Override
+            public void schedule(Date date, String time) {
+
+            }
+        };
+
+
+
+
+
 
 //        for (Doctor.AvailableAppointment aA: myDoctor.getAvailableAppointments()){
 //            System.out.println(aA.getDate()+ " " + aA.getTime());
